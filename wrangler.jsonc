@@ -1,0 +1,36 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "storycat-backend",
+	"main": "worker.py",
+	"compatibility_date": "2026-06-01",
+	"compatibility_flags": [
+		"python_workers"
+	],
+	"workers_dev": true,
+	"vars": {
+		"LLM_FAKE_MODE": "true"
+	},
+	"python_modules": {
+		"excludes": [
+			"**/*.pyc",
+			"**/__pycache__"
+		]
+	},
+	"observability": {
+		"enabled": true
+	}
+	// Optional custom-domain route example:
+	// "routes": [
+	// 	{
+	// 		"pattern": "api.example.com/storycat/*",
+	// 		"zone_name": "example.com"
+	// 	}
+	// ],
+	// Optional KV persistence example:
+	// "kv_namespaces": [
+	// 	{
+	// 		"binding": "STORYCAT_STATE",
+	// 		"id": "REPLACE_WITH_KV_NAMESPACE_ID"
+	// 	}
+	// ]
+}

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-playable-novel"
+version = "0.1.0"
+description = "AI-generated playable novel MVP backend."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115,<1.0",
+  "pydantic>=2,<3",
+  "pydantic-settings>=2,<3"
+]
+
+[project.optional-dependencies]
+dev = [
+  "httpx>=0.27,<1.0",
+  "pytest>=8,<9",
+  "uvicorn[standard]>=0.30,<1.0",
+]
+
+[dependency-groups]
+cloudflare = [
+  "workers-py>=0.6.0",
+  "workers-runtime-sdk>=0.0.9",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+exclude = ["ios*", "scripts*", "tests*"]
