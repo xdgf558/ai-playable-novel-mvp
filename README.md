@@ -4,6 +4,23 @@ StoryCat is an AI playable novel MVP by Station Cat.
 
 It combines a FastAPI backend, a SwiftUI iOS app, and an optional Cloudflare Worker deployment path to explore long-form interactive storytelling for Chinese-first readers.
 
+## 中文说明
+
+StoryCat（故事猫）是一个由 Station Cat 打造的 AI 互动小说 MVP 项目。
+
+这个仓库目前包含三部分：
+
+- Python `FastAPI` 后端，用于故事生成、状态推进、接口返回和假数据模式开发
+- SwiftUI iOS 客户端，用于模板选择、主角创建、剧情游玩和本地缓存
+- 可选的 Cloudflare Worker 部署适配层，用于把同一套后端接口部署到边缘环境
+
+项目当前更偏向一个可运行、可迭代、可继续扩展的原型版本，适合拿来研究：
+
+- AI 互动叙事产品的基础架构
+- iOS 客户端与后端 API 的协作方式
+- 假数据模式到真实模型接入的演进路径
+- 轻量级故事状态管理与多轮剧情推进
+
 ## Highlights
 
 - AI playable novel flow with story templates, protagonist setup, branching turns, and persistent story state
